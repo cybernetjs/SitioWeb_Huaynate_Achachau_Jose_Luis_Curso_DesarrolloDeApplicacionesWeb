@@ -85,15 +85,17 @@ const About = () => {
                   José Luis Huaynate Achachau
                 </h3>
                 <p style={{ color: '#ccd6f6', fontSize: 'clamp(20px, 2.1vw, 28px)', lineHeight: 1.35, fontWeight: 500 }}>
-                  Ingeniero de Sistemas
+                  Estudiante de Ingeniería de Sistemas
                 </p>
                 <p style={{ color: '#8892b0', fontSize: '18px', lineHeight: 1.85, marginBottom: '0', maxWidth: '720px' }}>
-                  Hola, mi nombre es José y Cuento con conocimientos en arquitectura de software, programación, administración 
-                  de sistemas, bases de datos y seguridad informática, lo que me permite entender cómo se diseñan, implementan 
-                  y mantienen soluciones tecnológicas en una organización. Me enfoco en analizar los sistemas no solo desde su 
-                  funcionamiento, sino también desde su diseño, eficiencia y seguridad. Además, tengo conocimientos en redes y 
-                  comunicaciones, comprendiendo el funcionamiento de protocolos, modelos de red y configuración de entornos tecnológicos.
-
+                  Hola, mi nombre es José y soy estudiante del noveno semestre de la Facultad de Ingeniería de Sistemas de la
+                  Universidad Nacional del Centro del Perú. Realicé prácticas en la Oficina de Tecnologías de la Información de
+                  la UNCP, donde reforcé mi enfoque en soporte, gestión tecnológica y procesos internos. Cuento con conocimientos
+                  en arquitectura de software, programación, administración de sistemas, bases de datos y seguridad informática,
+                  lo que me permite entender cómo se diseñan, implementan y mantienen soluciones tecnológicas en una organización.
+                  Me enfoco en analizar los sistemas no solo desde su funcionamiento, sino también desde su diseño, eficiencia y
+                  seguridad. Además, tengo conocimientos en redes y comunicaciones, comprendiendo el funcionamiento de protocolos,
+                  modelos de red y configuración de entornos tecnológicos.
                 </p>
               </div>
 

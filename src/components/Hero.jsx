@@ -131,8 +131,7 @@ const Hero = () => {
                 minHeight: '0'
               }}
             >
-              Soy Ingeniero de Sistemas , con formación integral en redes, ciberseguridad y electrónica.
-              <br />
+              Estudiante de la Facultad de Ingeniería de Sistemas de la UNCP.
             </h3>
             <h2
               className="hero-headline"
