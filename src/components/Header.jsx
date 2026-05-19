@@ -14,13 +14,14 @@ const Header = () => {
   }, [])
 
   const navLinks = [
-    { href: '#inicio', label: 'Inicio' },
-    { href: '#sobre-mi', label: 'Sobre Mí' },
-    { href: '#formacion', label: 'Formación' },
-    { href: '#habilidades', label: 'Habilidades' },
-    { href: '#proyectos', label: 'Proyectos' },
-    { href: '#cuaderno', label: 'Cuaderno' },
-    { href: '#bibliografia', label: 'Bibliografía' },
+    { href: '/#inicio', label: 'Inicio' },
+    { href: '/#sobre-mi', label: 'Sobre Mí' },
+    { href: '/#formacion', label: 'Formación' },
+    { href: '/#habilidades', label: 'Habilidades' },
+    { href: '/#proyectos', label: 'Proyectos' },
+    { href: '/#cuaderno', label: 'Cuaderno (Sección)' },
+    { href: '/#bibliografia', label: 'Bibliografía' },
+    { href: '/cuaderno', label: 'Cuaderno' },
   ]
 
   const headerStyle = {
