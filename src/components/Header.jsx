@@ -71,7 +71,7 @@ const Header = () => {
         <a href="#" onClick={(e) => handleAnchorClick(e, '#inicio')}
           style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#00aaff', fontSize: '22px', fontWeight: 700 }}>
           <FaShieldAlt style={{ fontSize: '24px', color: '#00aaff' }} />
-          <span style={{ color: '#00aaff', fontSize: '22px', fontWeight: 700 }}>NetStrikerJS</span>
+          <span style={{ color: '#00aaff', fontSize: '22px', fontWeight: 700 }}>Jose Luis</span>
         </a>
 
         <nav style={{ display: 'none' }} className="desktop-nav">

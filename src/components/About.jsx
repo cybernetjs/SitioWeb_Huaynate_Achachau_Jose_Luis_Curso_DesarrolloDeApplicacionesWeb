@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaUserShield, FaLayerGroup, FaCode, FaBrain } from 'react-icons/fa'
+import { FaLayerGroup, FaCode, FaBrain } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
+import foto from '../../foto/foto.jpg'
 
 const About = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 })
@@ -50,7 +51,7 @@ const About = () => {
                 <div 
                   style={{ 
                     width: '370px',
-                    height: '370px',
+                    height: '480px',
                     borderRadius: '18px',
                     backgroundColor: '#112240',
                     border: '3px solid #00a8ff',
@@ -61,7 +62,16 @@ const About = () => {
                     zIndex: 2
                   }}
                 >
-                  <FaUserShield style={{ fontSize: '188px', color: 'rgba(0, 168, 255, 0.55)' }} />
+                  <img
+                    src={foto}
+                    alt="Foto de Jose Luis Huaynate Achachau"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      borderRadius: '14px'
+                    }}
+                  />
                 </div>
                 <div 
                   style={{ 
@@ -69,7 +79,7 @@ const About = () => {
                     top: '18px',
                     left: '18px',
                     width: '370px',
-                    height: '370px',
+                    height: '480px',
                     borderRadius: '18px',
                     border: '3px solid #00a8ff',
                     zIndex: 1
@@ -156,7 +166,7 @@ const About = () => {
           .about-image > div > div:first-child,
           .about-image > div > div:last-child {
             width: 310px !important;
-            height: 310px !important;
+            height: 420px !important;
           }
           .about-image > div > div:first-child svg {
             font-size: 146px !important;
