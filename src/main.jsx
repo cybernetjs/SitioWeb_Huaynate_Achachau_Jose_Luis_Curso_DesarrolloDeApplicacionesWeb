@@ -7,7 +7,7 @@ import CuadernoPage from './pages/CuadernoPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/SitioWeb_Huaynate_Achachau_Jose_Luis_Curso_DesarrolloDeApplicacionesWeb/">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/cuaderno" element={<CuadernoPage />} />
