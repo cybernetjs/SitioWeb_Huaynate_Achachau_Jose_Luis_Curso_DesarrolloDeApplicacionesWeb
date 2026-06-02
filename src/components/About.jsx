@@ -97,7 +97,7 @@ const About = () => {
                 <p style={{ color: '#ccd6f6', fontSize: 'clamp(20px, 2.1vw, 28px)', lineHeight: 1.35, fontWeight: 500 }}>
                   Estudiante de Ingeniería de Sistemas
                 </p>
-                <p style={{ color: '#8892b0', fontSize: '18px', lineHeight: 1.85, marginBottom: '0', maxWidth: '720px' }}>
+                <p style={{ color: '#8892b0', fontSize: '18px', lineHeight: 1.85, marginBottom: '0', maxWidth: '720px', textAlign: 'justify' }}>
                   Hola, mi nombre es José y soy estudiante del noveno semestre de la Facultad de Ingeniería de Sistemas de la
                   Universidad Nacional del Centro del Perú. Realicé prácticas en la Oficina de Tecnologías de la Información de
                   la UNCP, donde reforcé mi enfoque en soporte, gestión tecnológica y procesos internos. Cuento con conocimientos
