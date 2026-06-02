@@ -49,7 +49,7 @@ const Hero = () => {
     { type: 'skill', text: '[+] Ciberseguridad y análisis de riesgos' },
     { type: 'skill', text: '[+] Electrónica y hardware' },
     { type: 'empty', text: '' },
-    { type: 'command', text: '$ ./build_solutions.sh' },
+    { type: 'command', text: '$ ./construir_soluciones.sh' },
     { type: 'success', text: '[✓] Soluciones eficientes y seguras' },
     { type: 'empty', text: '' },
     { type: 'cursor', text: '$ ' },
@@ -245,7 +245,7 @@ const Hero = () => {
                   <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#27ca40' }} />
                 </div>
                 <span style={{ color: '#8892b0', fontSize: '13px', fontFamily: "'Fira Code', monospace" }}>
-                  bash ~ systems-engineering
+                  bash ~ ingenieria-de-sistemas
                 </span>
               </div>
 
