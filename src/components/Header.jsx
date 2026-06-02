@@ -13,16 +13,16 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { href: '/#inicio', label: 'Inicio' },
-    { href: '/#sobre-mi', label: 'Sobre Mí' },
-    { href: '/#formacion', label: 'Formación' },
-    { href: '/#habilidades', label: 'Habilidades' },
-    { href: '/#proyectos', label: 'Proyectos' },
-    { href: '/#cuaderno', label: 'Cuaderno (Sección)' },
-    { href: '/#bibliografia', label: 'Bibliografía' },
-    { href: '/cuaderno', label: 'Cuaderno' },
-  ]
+const navLinks = [
+    { href: '#inicio', label: 'Inicio' },
+    { href: '#sobre-mi', label: 'Sobre Mí' },
+    { href: '#formacion', label: 'Formación' },
+    { href: '#habilidades', label: 'Habilidades' },
+    { href: '#proyectos', label: 'Proyectos' },
+    { href: '#cuaderno', label: 'Cuaderno (Sección)' },
+    { href: '#bibliografia', label: 'Bibliografía' },
+    { href: '/cuaderno', label: 'Cuaderno', isRoute: true },
+]
 
   const headerStyle = {
     position: 'fixed',
