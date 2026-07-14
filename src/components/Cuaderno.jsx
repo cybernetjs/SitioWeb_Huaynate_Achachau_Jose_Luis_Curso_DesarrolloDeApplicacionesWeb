@@ -16,13 +16,30 @@ const Cuaderno = () => {
     'LAB 07 -> Uso de hooks (useState, useEffect, personalizado).'
   ]
 
+  const resumenLaboratoriosUnidadII = [
+    'LAB 09 -> Despliegue de aplicaciones web backend con PHP y JSP.',
+    'LAB 10 -> Aplicacion con Python (POO, excepciones y modulos).',
+    'LAB 11 -> Desarrollo de vistas, plantillas y modelos con Django.',
+    'LAB 12 -> Desarrollo de un sistema web backend (formularios, admin, sesiones).',
+    'LAB 13 -> Desarrollo de un sistema web backend (API RESTful con Django).',
+    'PROYECTO -> Microservicio con Django, Docker y Kubernetes.'
+  ]
+
   const bibliografiaLibros = [
     'Media Active (2014). Aprende a Programar Apps con HTML5, CSS y JavaScript. Editorial Alfaomega. Primera Edicion. (L-CA-3811).',
     'Frank Zickert (2020). React Architect: Full Stack React App Development and Serverless Deployment. Editorial React-Architect.',
+    'Roldan Martinez, David (2018). Microservicios: un enfoque integrado. Editorial RA-MA. Madrid, Espana.',
+    'Schild, Herbert (2018). Java 9: una guia para principiantes. Anaya Multimedia. 7ma edicion.',
     'Pressman, R. S. y Maxim, B. (2015). Software Engineering: A Practitioner\'s Approach. McGraw-Hill. 8th edition.',
+    'Sommerville, I. (2017). Software Engineering. Pearson. 10th edition.',
     'Pressman, R. S. y Maxim, B. (2010). Ingenieria del Software: Un enfoque practico. McGraw-Hill. 7ma edicion.',
     'Sommerville, I. (2011). Ingenieria del Software. Pearson. 9na edicion.',
-    'Gerard O\'Regan (2017). Concise Guide to Software Engineering: From Fundamentals to Application Methods. Editorial Springer International. Primera Edicion. Cham, Suiza.'
+    'Gerard O\'Regan (2017). Concise Guide to Software Engineering: From Fundamentals to Application Methods. Editorial Springer International. Primera Edicion. Cham, Suiza.',
+    'Torres Remon, M. (2013). Desarrollo de aplicaciones con Java. Empresa Editora Macro EIRL. Primera edicion.',
+    'Brahma Dathan y Sarnath Ramnath (2015). Object-Oriented Analysis, Design and Implementation - An Integrated Approach. Editorial Springer International. Segunda Edicion. Cham, Suiza.',
+    'Bennett, Simon; Mcrobb, Steve; Farmer, Ray (2006). Analisis y diseno orientado a objetos de sistemas usando UML. Editorial Mc-Graw Hill. Tercera Edicion. (L-CA-3213).',
+    'Piattini, Mario G.; Calvo Manzano, Jose A.; Cervera, Joaquin; Fernandez, Luis (2004). Analisis y Diseno de Aplicaciones Informaticas de Gestion - Una Perspectiva de Ingenieria de Software. Editorial Alfaomega. (L-CA-3111).',
+    'Carranza, Zalatiel (2004). Analisis de Sistemas de Software. Editorial Universidad de Lima. Primera Edicion. (L-CA-3109).'
   ]
 
   const bibliografiaUrls = [
@@ -766,6 +783,682 @@ const Cuaderno = () => {
       ]
     },
     {
+      id: 'semana-09',
+      title: 'Semana 09 - Tecnologia Web Backend',
+      blocks: [
+        {
+          type: 'paragraph',
+          title: '9.1 Arquitectura de aplicaciones web',
+          texts: [
+            'Modelo cliente-servidor: el cliente (navegador) envia peticiones HTTP y el servidor procesa la logica de negocio, accede a la base de datos y devuelve una respuesta (HTML, JSON, XML).',
+            'Servidores web comunes: Apache HTTP Server, Nginx, IIS, servidor de desarrollo integrado en frameworks (runserver de Django, php -S).'
+          ]
+        },
+        {
+          type: 'definition',
+          title: '9.2 Funcionamiento del server side',
+          items: [
+            {
+              term: 'Server-Side Rendering (SSR)',
+              desc: 'El servidor genera el HTML completo antes de enviarlo al navegador, mejorando el SEO y el tiempo de primera carga.'
+            },
+            {
+              term: 'Lenguaje backend',
+              desc: 'Lenguaje que se ejecuta en el servidor para procesar peticiones: PHP, Java (JSP), Python, Node.js.'
+            },
+            {
+              term: 'Framework backend',
+              desc: 'Conjunto de herramientas que estandariza el desarrollo del lado servidor: Laravel (PHP), Spring (Java), Django/Flask (Python), Express (Node.js).'
+            }
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: '9.3 Aplicaciones Web con PHP',
+          texts: [
+            'PHP es un lenguaje de scripting embebido en HTML que se ejecuta en el servidor. Es interpretado, de tipado dinamico y ampliamente usado (WordPress, Laravel).'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo basico en PHP',
+          lines: [
+            '<?php',
+            '  $nombre = "Jose Luis";',
+            '  echo "Hola " . $nombre;',
+            '',
+            '  if (isset($_GET["id"])) {',
+            '    echo "ID recibido: " . $_GET["id"];',
+            '  }',
+            '?>'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: '9.4 Aplicaciones Web con JSP',
+          texts: [
+            'JSP (JavaServer Pages) permite incrustar codigo Java dentro de paginas HTML. Se ejecuta sobre un servidor de aplicaciones (Apache Tomcat) y se compila a un servlet.'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo basico en JSP',
+          lines: [
+            '<%@ page language="java" %>',
+            '<html>',
+            '  <body>',
+            '    <% String nombre = "Jose Luis"; %>',
+            '    <p>Hola <%= nombre %></p>',
+            '  </body>',
+            '</html>'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Laboratorio 09',
+          texts: [
+            'Despliegue de aplicaciones web backend con PHP y JSP.',
+            'Objetivo: configurar un entorno de servidor local (XAMPP/Apache Tomcat) y desplegar una pagina dinamica simple en PHP y otra en JSP que reciban y muestren datos del lado servidor.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a diferenciar el procesamiento del lado servidor frente al del cliente.',
+            'Como aprendi: desplegando ejemplos en PHP y JSP y comparando su ciclo de ejecucion.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Laboratorio Semana 09',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-10',
+      title: 'Semana 10 - Lenguaje Python',
+      blocks: [
+        {
+          type: 'list',
+          title: '10.1 Sintaxis basica',
+          items: [
+            'Python usa indentacion (espacios) para delimitar bloques de codigo en lugar de llaves.',
+            'Comentarios de una linea con #, comentarios multilinea con triple comilla \'\'\' o """.',
+            'Variables: tipado dinamico, no requieren declaracion explicita de tipo (x = 10).'
+          ]
+        },
+        {
+          type: 'list',
+          title: '10.2 Tipos de datos',
+          items: [
+            'Numeros: int, float, complex.',
+            'Cadenas (str): inmutables, con metodos como .upper(), .split(), .format().',
+            'Listas: [1, 2, 3], mutables y ordenadas.',
+            'Tuplas: (1, 2, 3), inmutables y ordenadas.',
+            'Diccionarios: {"clave": "valor"}, pares clave-valor.',
+            'Booleanos: True / False.'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Estructuras de control y funciones',
+          lines: [
+            'edad = 20',
+            'if edad >= 18:',
+            '    print("Mayor de edad")',
+            'else:',
+            '    print("Menor de edad")',
+            '',
+            'for i in range(5):',
+            '    print(i)',
+            '',
+            'def sumar(a, b):',
+            '    return a + b',
+            '',
+            'resultado = sumar(3, 4)'
+          ]
+        },
+        {
+          type: 'definition',
+          title: '10.3 Programacion orientada a objetos',
+          items: [
+            {
+              term: 'Encapsulamiento',
+              desc: 'Ocultar el estado interno de un objeto; en Python se usa convencion con guion bajo (_atributo, __atributo).'
+            },
+            {
+              term: 'Herencia multiple',
+              desc: 'Python permite que una clase herede de varias clases padre: class Hijo(PadreA, PadreB).'
+            },
+            {
+              term: 'Polimorfismo',
+              desc: 'Distintas clases pueden implementar el mismo metodo con comportamientos diferentes.'
+            },
+            {
+              term: 'Clases, atributos e instancias',
+              desc: 'Una clase es una plantilla; un atributo describe el estado; una instancia es un objeto creado a partir de la clase.'
+            },
+            {
+              term: 'Constructores y destructores',
+              desc: '__init__ inicializa una instancia al crearla; __del__ se ejecuta cuando el objeto es eliminado.'
+            },
+            {
+              term: 'Excepciones y modulos',
+              desc: 'try/except/finally para manejo de errores; import para reutilizar codigo desde otros archivos o paquetes.'
+            }
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de clase en Python',
+          lines: [
+            'class Persona:',
+            '    def __init__(self, nombre):',
+            '        self.nombre = nombre',
+            '',
+            '    def saludar(self):',
+            '        return f"Hola, soy {self.nombre}"',
+            '',
+            'try:',
+            '    p = Persona("Jose Luis")',
+            '    print(p.saludar())',
+            'except Exception as e:',
+            '    print("Error:", e)'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Laboratorio 10',
+          texts: [
+            'Aplicacion con Python.',
+            'Objetivo: implementar un programa en Python que use clases, herencia, manejo de excepciones y al menos un modulo propio importado.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a aplicar POO en Python y a estructurar codigo en modulos.',
+            'Como aprendi: practicando ejercicios de clases y manejo de errores.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Laboratorio Semana 10',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-11',
+      title: 'Semana 11 - Introduccion a Django',
+      blocks: [
+        {
+          type: 'definition',
+          title: '11.1 Patrones de arquitectura',
+          items: [
+            {
+              term: 'MVC (Model-View-Controller)',
+              desc: 'Separa datos (Model), presentacion (View) y logica de control (Controller).'
+            },
+            {
+              term: 'MTV (Model-Template-View)',
+              desc: 'Variante de Django: Model gestiona datos, Template la presentacion y View la logica (equivalente al Controller de MVC).'
+            }
+          ]
+        },
+        {
+          type: 'code',
+          title: '11.2 Instalacion y gestion de proyectos',
+          lines: [
+            'pip install django',
+            'django-admin startproject miproyecto',
+            'cd miproyecto',
+            'python manage.py startapp miapp',
+            'python manage.py runserver',
+            '# Integracion con Apache: modulo mod_wsgi'
+          ]
+        },
+        {
+          type: 'list',
+          title: '11.3 Vistas y URLs',
+          items: [
+            'Vistas basadas en funcion (FBV): def index(request): return render(...).',
+            'Vistas basadas en clase (CBV): class Index(View) o class ListaAlumnos(ListView).',
+            'Configuracion de urls.py con path("ruta/", vista, name="nombre").'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de vista y URL',
+          lines: [
+            '# views.py',
+            'from django.shortcuts import render',
+            'def index(request):',
+            '    return render(request, "index.html")',
+            '',
+            '# urls.py',
+            'from django.urls import path',
+            'from . import views',
+            'urlpatterns = [',
+            '    path("", views.index, name="index"),',
+            ']'
+          ]
+        },
+        {
+          type: 'list',
+          title: '11.4 Plantillas',
+          items: [
+            'Herencia de plantillas: {% extends "base.html" %}.',
+            'Bloques: {% block contenido %} ... {% endblock %}.',
+            'Etiquetas: {% for %}, {% if %}, {% url %}.',
+            'Filtros: {{ variable|upper }}, {{ fecha|date:"d/m/Y" }}.'
+          ]
+        },
+        {
+          type: 'definition',
+          title: '11.5 Modelo de datos',
+          items: [
+            {
+              term: 'Modelos',
+              desc: 'Clases Python que heredan de models.Model y representan tablas de la base de datos.'
+            },
+            {
+              term: 'API para base de datos (ORM)',
+              desc: 'Permite crear, leer, actualizar y eliminar registros usando codigo Python en vez de SQL directo.'
+            },
+            {
+              term: 'Tipos de campos',
+              desc: 'CharField, TextField, IntegerField, DateField, ForeignKey, ManyToManyField, entre otros.'
+            },
+            {
+              term: 'Consultas (QuerySet)',
+              desc: 'Modelo.objects.all(), .filter(), .get(), .exclude() para construir consultas encadenables.'
+            }
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de modelo',
+          lines: [
+            'from django.db import models',
+            '',
+            'class Alumno(models.Model):',
+            '    nombre = models.CharField(max_length=100)',
+            '    correo = models.EmailField()',
+            '    fecha_registro = models.DateField(auto_now_add=True)',
+            '',
+            '# Consulta',
+            'Alumno.objects.filter(nombre__icontains="Jose")'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Laboratorio 11',
+          texts: [
+            'Desarrollo de vistas, plantillas y modelos.',
+            'Objetivo: crear una app Django con al menos un modelo, sus migraciones, una vista basada en clase y una plantilla con herencia que liste los datos del modelo.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a organizar un proyecto backend siguiendo el patron MTV.',
+            'Como aprendi: creando modelos, migrando la base de datos y conectando vistas con plantillas.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Laboratorio Semana 11',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-12',
+      title: 'Semana 12 - Formularios, Admin y Middleware',
+      blocks: [
+        {
+          type: 'list',
+          title: '12.1 Gestion de formularios',
+          items: [
+            'forms.Form para formularios independientes del modelo.',
+            'forms.ModelForm para generar formularios automaticamente a partir de un modelo.',
+            'Validacion integrada por tipo de campo y validadores personalizados (clean_<campo>).',
+            'Sanitizacion de datos antes de guardarlos en la base de datos.'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de ModelForm',
+          lines: [
+            'from django import forms',
+            'from .models import Alumno',
+            '',
+            'class AlumnoForm(forms.ModelForm):',
+            '    class Meta:',
+            '        model = Alumno',
+            '        fields = ["nombre", "correo"]',
+            '',
+            '    def clean_nombre(self):',
+            '        nombre = self.cleaned_data["nombre"]',
+            '        if len(nombre) < 3:',
+            '            raise forms.ValidationError("Nombre muy corto")',
+            '        return nombre'
+          ]
+        },
+        {
+          type: 'list',
+          title: '12.2 Django Admin',
+          items: [
+            'Activacion en admin.py con admin.site.register(Modelo).',
+            'Personalizacion con clases ModelAdmin: list_display, search_fields, list_filter.',
+            'Creacion de campos calculados con metodos decorados con @admin.display.',
+            'Formularios personalizados dentro del panel de administracion.'
+          ]
+        },
+        {
+          type: 'definition',
+          title: '12.3 Middleware y sesiones',
+          items: [
+            {
+              term: 'Middleware',
+              desc: 'Componente que procesa cada peticion/respuesta antes de llegar a la vista o antes de devolverse al cliente (ej. seguridad, sesiones, autenticacion).'
+            },
+            {
+              term: 'Sesiones',
+              desc: 'Django almacena datos por usuario entre peticiones usando request.session, respaldado por cookies o base de datos.'
+            },
+            {
+              term: 'Autenticacion',
+              desc: 'Verifica la identidad del usuario (login/logout) con django.contrib.auth.'
+            },
+            {
+              term: 'Autorizacion',
+              desc: 'Controla el acceso a recursos segun permisos o grupos: @login_required, @permission_required.'
+            }
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Laboratorio 12',
+          texts: [
+            'Desarrollo de un sistema web backend.',
+            'Objetivo: implementar un CRUD con formularios validados, registrar los modelos en Django Admin y proteger las vistas con autenticacion y manejo de sesiones.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a validar datos de forma segura y a proteger vistas con autenticacion.',
+            'Como aprendi: construyendo formularios, probando el panel admin y depurando sesiones.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Laboratorio Semana 12',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-13',
+      title: 'Semana 13 - Diseno de APIs RESTful',
+      blocks: [
+        {
+          type: 'definition',
+          title: '13.1 Introduccion a REST',
+          items: [
+            {
+              term: 'REST',
+              desc: 'Estilo arquitectonico para servicios web basado en recursos identificados por URLs y operados con metodos HTTP (GET, POST, PUT, DELETE).'
+            },
+            {
+              term: 'Recurso',
+              desc: 'Entidad expuesta por la API (ej. /api/alumnos/) representada usualmente en JSON.'
+            },
+            {
+              term: 'Hipermedios y HATEOAS',
+              desc: 'Hypermedia As The Engine Of Application State: las respuestas incluyen enlaces a otros recursos relacionados, permitiendo navegar la API dinamicamente.'
+            }
+          ]
+        },
+        {
+          type: 'list',
+          title: '13.2 Serializacion y filtrado',
+          items: [
+            'Serializacion de modelos con serializers.ModelSerializer (Django REST Framework).',
+            'Serializacion desde otras fuentes de datos (querysets personalizados, agregaciones).',
+            'Filtrado de resultados por parametros de consulta (?estado=activo).',
+            'Paginacion de resultados grandes (PageNumberPagination, LimitOffsetPagination).',
+            'Limites temporales de uso (throttling) para prevenir abuso de la API.'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de serializer y vista',
+          lines: [
+            'from rest_framework import serializers, viewsets',
+            'from .models import Alumno',
+            '',
+            'class AlumnoSerializer(serializers.ModelSerializer):',
+            '    class Meta:',
+            '        model = Alumno',
+            '        fields = "__all__"',
+            '',
+            'class AlumnoViewSet(viewsets.ModelViewSet):',
+            '    queryset = Alumno.objects.all()',
+            '    serializer_class = AlumnoSerializer'
+          ]
+        },
+        {
+          type: 'list',
+          title: '13.3 Ruteadores y seguridad',
+          items: [
+            'Routers de DRF generan automaticamente las URLs de un ViewSet (router.register).',
+            'AJAX permite consumir la API desde JavaScript sin recargar la pagina.',
+            'CSRF (Cross-Site Request Forgery): proteccion contra envio de formularios falsificados.',
+            'CORS (Cross-Origin Resource Sharing): habilita el consumo de la API desde otros dominios (frontend en React).'
+          ]
+        },
+        {
+          type: 'code',
+          title: 'Ejemplo de router',
+          lines: [
+            'from rest_framework.routers import DefaultRouter',
+            'from .views import AlumnoViewSet',
+            '',
+            'router = DefaultRouter()',
+            'router.register("alumnos", AlumnoViewSet)',
+            '',
+            'urlpatterns = router.urls'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Laboratorio 13',
+          texts: [
+            'Desarrollo de un sistema web backend.',
+            'Objetivo: construir una API RESTful con Django REST Framework que exponga un recurso con operaciones CRUD, paginacion, filtrado y proteccion CORS/CSRF, lista para ser consumida desde React.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a diseñar APIs siguiendo el estandar REST y a protegerlas correctamente.',
+            'Como aprendi: probando endpoints con Postman/Insomnia y consumiendolos desde el frontend.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Laboratorio Semana 13',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-14',
+      title: 'Semana 14 - Microservicios en Django',
+      blocks: [
+        {
+          type: 'definition',
+          title: '14.1 Introduccion a microservicios',
+          items: [
+            {
+              term: 'Microservicio',
+              desc: 'Servicio pequeno, independiente y desplegable por separado, enfocado en una unica capacidad de negocio.'
+            },
+            {
+              term: 'Arquitectura de microservicios',
+              desc: 'Divide una aplicacion monolitica en varios servicios que se comunican entre si, cada uno con su propio ciclo de despliegue.'
+            },
+            {
+              term: 'Comunicacion entre microservicios',
+              desc: 'Se realiza mediante llamadas REST/HTTP, mensajeria asincrona (RabbitMQ, Kafka) o gRPC.'
+            },
+            {
+              term: 'Gestion de bases de datos en microservicios',
+              desc: 'Patron "database per service": cada microservicio administra su propia base de datos para mantener bajo acoplamiento.'
+            }
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: '14.2 Construccion del primer microservicio',
+          texts: [
+            'Se configura un proyecto Django reducido y enfocado (ej. microservicio-alumnos) que expone su propia API RESTful, independiente de otros servicios del sistema.'
+          ]
+        },
+        {
+          type: 'code',
+          title: '14.3 Docker y Kubernetes',
+          lines: [
+            '# Dockerfile',
+            'FROM python:3.11-slim',
+            'WORKDIR /app',
+            'COPY requirements.txt .',
+            'RUN pip install -r requirements.txt',
+            'COPY . .',
+            'CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]',
+            '',
+            '# docker-compose.yml (fragmento)',
+            'services:',
+            '  alumnos-service:',
+            '    build: ./alumnos',
+            '    ports:',
+            '      - "8001:8000"'
+          ]
+        },
+        {
+          type: 'list',
+          title: 'Proteccion, monitoreo y escalado',
+          items: [
+            'Proteccion: autenticacion con tokens JWT y un API Gateway como punto unico de entrada.',
+            'Monitoreo: herramientas como Prometheus y Grafana para observar salud y metricas de cada servicio.',
+            'Escalado: Kubernetes permite escalar horizontalmente cada microservicio de forma independiente segun la demanda (Deployments, Services, HorizontalPodAutoscaler).'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Consumo del microservicio',
+          texts: [
+            'El frontend en React consume los endpoints del microservicio mediante Axios/fetch, integrando la solucion fullstack construida durante el curso.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a descomponer un backend monolitico en servicios independientes y desplegarlos con contenedores.',
+            'Como aprendi: creando un microservicio simple, dockerizandolo y probando su comunicacion con el frontend.'
+          ]
+        },
+        {
+          type: 'button',
+          title: 'Proyecto Microservicios',
+          url: 'https://github.com/'
+        }
+      ]
+    },
+    {
+      id: 'semana-15',
+      title: 'Semana 15 - Proyecto de investigacion y RSU',
+      blocks: [
+        {
+          type: 'list',
+          title: '15.1 Exposicion del proyecto de investigacion',
+          items: [
+            'Presentacion del estado del arte investigado durante el curso.',
+            'Exposicion del trabajo aplicativo desarrollado (aplicacion web fullstack).',
+            'Sustentacion de las decisiones tecnicas: arquitectura, framework backend y frontend elegidos.'
+          ]
+        },
+        {
+          type: 'list',
+          title: '15.2 Responsabilidad Social Universitaria (RSU)',
+          items: [
+            'Vinculacion del proyecto con los Objetivos de Desarrollo Sostenible (ODS).',
+            'Enfoque en beneficiar a la comunidad Huancaina con la solucion desarrollada.',
+            'Tutoria orientada a promover proyectos con impacto social real.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Evaluacion de Logro 02',
+          texts: [
+            'Se evalua el desarrollo completo de una solucion web fullstack: frontend (React) consumiendo una API backend (Django) basada en microservicios, cumpliendo estandares internacionales de desarrollo.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Reflexion',
+          texts: [
+            'Que aprendi: a comunicar tecnicamente un proyecto y a vincular la solucion con un impacto social.',
+            'Como aprendi: preparando la exposicion, documentando el proyecto y recibiendo retroalimentacion.'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'semana-16',
+      title: 'Semana 16 - Revision y segundo consolidado',
+      blocks: [
+        {
+          type: 'list',
+          title: 'Revision y consolidado final',
+          items: [
+            'Revision y retroalimentacion de la Evaluacion de Logro 02.',
+            'Segundo consolidado de evaluacion continua.',
+            'Reforzamiento de temas de las semanas 09 al 15.',
+            'Fecha del consolidado: 20 al 24 de julio de 2026.'
+          ]
+        },
+        {
+          type: 'list',
+          title: 'Formula de calificacion (Unidad II)',
+          items: [
+            'PP2 = EL*0.50 + PLP*0.25 + TI*0.25.',
+            'EL = Evaluacion de Logro (examen) 50%.',
+            'PLP = Promedio de Laboratorios y Practicas 25%.',
+            'TI = Trabajo de Investigacion + Portafolio 25%.',
+            'Promedio Final = (PP1 + PP2) / 2.'
+          ]
+        },
+        {
+          type: 'paragraph',
+          title: 'Cierre del curso',
+          texts: [
+            'Con este segundo consolidado finaliza la asignatura Desarrollo de Aplicaciones Web (IS093A), habiendo cubierto el desarrollo frontend con SPA en React y el desarrollo backend con PHP, JSP, Python, Django y microservicios.'
+          ]
+        }
+      ]
+    },
+    {
       id: 'resumen-labs',
       title: 'Resumen de laboratorios',
       blocks: [
@@ -773,6 +1466,11 @@ const Cuaderno = () => {
           type: 'list',
           title: 'Resumen de laboratorios - Unidad I',
           items: resumenLaboratorios
+        },
+        {
+          type: 'list',
+          title: 'Resumen de laboratorios - Unidad II',
+          items: resumenLaboratoriosUnidadII
         }
       ]
     },
@@ -922,6 +1620,29 @@ const Cuaderno = () => {
 
   const activeTab = tabs[activeIndex]
 
+  const getUnidadInfo = (tabId) => {
+    const semanaMatch = tabId.match(/^semana-(\d{2})$/)
+    if (semanaMatch) {
+      const semana = parseInt(semanaMatch[1], 10)
+      if (semana <= 8) {
+        return {
+          titulo: 'Unidad I: Desarrollo Web Frontend',
+          desc: 'Desarrollar aplicaciones web frontend de paginas simples SPA de acuerdo a la especificacion de documentos.'
+        }
+      }
+      return {
+        titulo: 'Unidad II: Desarrollo Web Fullstack',
+        desc: 'Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estandares internacionales.'
+      }
+    }
+    return {
+      titulo: 'Desarrollo de Aplicaciones Web',
+      desc: 'Portafolio educativo del curso: Unidad I (Frontend) y Unidad II (Fullstack).'
+    }
+  }
+
+  const unidadInfo = getUnidadInfo(activeTab.id)
+
   return (
     <section id="cuaderno" className="section" style={{ backgroundColor: 'transparent' }}>
       <div className="container">
@@ -938,10 +1659,13 @@ const Cuaderno = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             <div className="card" style={{ padding: '32px 34px' }}>
               <h3 style={{ color: '#00a8ff', fontSize: '22px', fontWeight: 700, marginBottom: '10px' }}>
-                Unidad I: Desarrollo Web Frontend
+                {unidadInfo.titulo}
               </h3>
               <p style={{ color: '#ccd6f6', fontSize: '15px', lineHeight: 1.8, marginBottom: '6px' }}>
                 Asignatura: Desarrollo de Aplicaciones Web (IS093A)
+              </p>
+              <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8, marginBottom: '6px' }}>
+                {unidadInfo.desc}
               </p>
               <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8 }}>
                 Universidad Nacional del Centro del Peru
