@@ -1620,29 +1620,6 @@ const Cuaderno = () => {
 
   const activeTab = tabs[activeIndex]
 
-  const getUnidadInfo = (tabId) => {
-    const semanaMatch = tabId.match(/^semana-(\d{2})$/)
-    if (semanaMatch) {
-      const semana = parseInt(semanaMatch[1], 10)
-      if (semana <= 8) {
-        return {
-          titulo: 'Unidad I: Desarrollo Web Frontend',
-          desc: 'Desarrollar aplicaciones web frontend de paginas simples SPA de acuerdo a la especificacion de documentos.'
-        }
-      }
-      return {
-        titulo: 'Unidad II: Desarrollo Web Fullstack',
-        desc: 'Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estandares internacionales.'
-      }
-    }
-    return {
-      titulo: 'Desarrollo de Aplicaciones Web',
-      desc: 'Portafolio educativo del curso: Unidad I (Frontend) y Unidad II (Fullstack).'
-    }
-  }
-
-  const unidadInfo = getUnidadInfo(activeTab.id)
-
   return (
     <section id="cuaderno" className="section" style={{ backgroundColor: 'transparent' }}>
       <div className="container">
@@ -1657,19 +1634,36 @@ const Cuaderno = () => {
           </h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-            <div className="card" style={{ padding: '32px 34px' }}>
-              <h3 style={{ color: '#00a8ff', fontSize: '22px', fontWeight: 700, marginBottom: '10px' }}>
-                {unidadInfo.titulo}
-              </h3>
-              <p style={{ color: '#ccd6f6', fontSize: '15px', lineHeight: 1.8, marginBottom: '6px' }}>
-                Asignatura: Desarrollo de Aplicaciones Web (IS093A)
-              </p>
-              <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8, marginBottom: '6px' }}>
-                {unidadInfo.desc}
-              </p>
-              <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8 }}>
-                Universidad Nacional del Centro del Peru
-              </p>
+            <div className="cuaderno-unidades" style={{ display: 'grid', gap: '24px', gridTemplateColumns: '1fr 1fr' }}>
+              <div className="card" style={{ padding: '32px 34px' }}>
+                <h3 style={{ color: '#00a8ff', fontSize: '22px', fontWeight: 700, marginBottom: '10px' }}>
+                  Unidad I: Desarrollo Web Frontend
+                </h3>
+                <p style={{ color: '#ccd6f6', fontSize: '15px', lineHeight: 1.8, marginBottom: '6px' }}>
+                  Asignatura: Desarrollo de Aplicaciones Web (IS093A)
+                </p>
+                <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8, marginBottom: '6px' }}>
+                  Desarrollar aplicaciones web frontend de paginas simples SPA de acuerdo a la especificacion de documentos.
+                </p>
+                <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8 }}>
+                  Universidad Nacional del Centro del Peru
+                </p>
+              </div>
+
+              <div className="card" style={{ padding: '32px 34px' }}>
+                <h3 style={{ color: '#00a8ff', fontSize: '22px', fontWeight: 700, marginBottom: '10px' }}>
+                  Unidad II: Desarrollo Web Fullstack
+                </h3>
+                <p style={{ color: '#ccd6f6', fontSize: '15px', lineHeight: 1.8, marginBottom: '6px' }}>
+                  Asignatura: Desarrollo de Aplicaciones Web (IS093A)
+                </p>
+                <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8, marginBottom: '6px' }}>
+                  Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estandares internacionales.
+                </p>
+                <p style={{ color: '#8892b0', fontSize: '14px', lineHeight: 1.8 }}>
+                  Universidad Nacional del Centro del Peru
+                </p>
+              </div>
             </div>
 
             <div className="cuaderno-grid" style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'minmax(220px, 280px) 1fr' }}>
@@ -1724,6 +1718,9 @@ const Cuaderno = () => {
       <style>{`
         @media (max-width: 900px) {
           .cuaderno-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .cuaderno-unidades {
             grid-template-columns: 1fr !important;
           }
         }
